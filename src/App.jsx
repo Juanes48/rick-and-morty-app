@@ -33,7 +33,7 @@ export function App() {
   }, []);
 
   return (
-    <>
+    <body style={{backgroundColor:"#E0F4FF",}}>
       <Navbar brand="Rick and Morty App" />
 
       <div className='container mt-5 bg-dark'>
@@ -41,6 +41,6 @@ export function App() {
         <Characters characters={character} />
         <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}/>
       </div>
-    </>
+    </body>
   );
 }
