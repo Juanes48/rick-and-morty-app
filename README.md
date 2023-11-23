@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Descripción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Cosas que se me facilitaron
 
-## Available Scripts
+Las cosas que se me facilitaron a la hora de realizar este proyecto fue traer los datos de las listas de los personajes, nombres, status, genero.
+También en la parte de diseño realizar modificaciones sencillas que se vieran agradables
 
-In the project directory, you can run:
+## Cosas que se me dificultaron
 
-### `npm start`
+Algunas de las cosas que se me dificultaron fue poner una barra de búsqueda por nombre de los personajes
+Subirlo al repositorio de git, me presentó algunos problemas al momento de subir, pero con varios tutoriales pude subirlo correctamente
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Cómo lo hice
 
-### `npm test`
+Utilizando la función fetch nos retorna la lista de personajes
+Con otra función .then, tenemos que realizar una conversión debido a que los datos se encuentran en formato json para así poder usar los datos de la API
+Importamos de la libreria de React, y desde ella usamos lo siguiente: useEffect y useState.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Con el useState nos retorna la variable del estado y la función que modifica ese estado, como es un array, vamos a poner que estará vació y luego se llenará con los datos de la API
 
-### `npm run build`
+Cree una carpeta llamada componentes en donde realizo todas las acciones necesarias
+Dentro de esta misma carpeta hay un archivo llamado Character, la cual recibe los datos del array creado anteriormente
+Presentamos esos datos dentro de una etiqueta div
+Iteramos con la función map, recibiendo como parámetros items
+El item es cada personaje que hay, lo presentamos dentro de cartas o div
+Agregamos una etiqueta image para visualizar las fotos de los personajes, dentro del src ponemos al item y la propiedad image
+Hacemos lo mismo con cada uno de los datos que deseamos traer o mostrar, ponemos el item y la propiedad que deseamos traer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para la paginación creamos otro componente y en ella creamos una lista para colocar los botones de siguientes y atrás
+Manejamos esta parte con eventos, onClick fue el que usé para ejecutar funciones
+Con arrow functions se realiza la lógica para que funcionen los botones
+Con una expresión en la cual verificamos si hay un link de previous, entonces mostrará el botón de previous, lo mismo para el botón de next
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
